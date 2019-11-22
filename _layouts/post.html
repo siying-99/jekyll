@@ -1,0 +1,42 @@
+---
+layout: base
+---
+
+<!-- 头部 -->
+<header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">美食天下</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">民以食为天，食以安为先。有得吃是最大的快乐！</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- 文章正文 -->
+  <article>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{content}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="clearfix">
+          {% if page.previous %}
+            <a class="btn btn-primary float-left" href="{{site.baseurl}}/{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next %}
+            <a class="btn btn-primary float-right" href="{{site.baseurl}}/{{page.next.url}}">下一篇： {{page.next.title}}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
